@@ -1,0 +1,63 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('./input.css');
+@import url('./button.css');
+@import url('./scrollbar.css');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, #app {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  background-color: #104046;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app *:not(i[class^="fa-"]) {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.container {
+  width: 50%;
+  flex-wrap: wrap;
+  max-width: 35em;
+  margin: 1em;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+body *:not(#map *) {
+  color: white;
+}
+
+.pb-1 {
+  padding-bottom: 1em;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    max-width: fit-content;
+  }
+}

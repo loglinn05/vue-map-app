@@ -1,0 +1,70 @@
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.locations-list {
+  width: 100%;
+  position: absolute;
+  margin-top: 0.2em;
+  z-index: 2000;
+  animation-duration: 0.3s;
+  animation-name: heightOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.locations-list.active {
+  animation-duration: 0.3s;
+  animation-name: heightIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.locations-list .locations-list-item {
+  display: inline-block;
+  width: 100%;
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
+  padding-left: 0.35em;
+  background: #003953;
+  color: white;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.locations-list .locations-list-item:hover {
+  background: #00293B;
+}
+
+@keyframes heightIn {
+  0% {
+    max-height: 0;
+    overflow-y: hidden;
+  }
+  99% {
+    max-height: 10em;
+    overflow-y: hidden;
+  }
+  100% {
+    max-height: 10em;
+    overflow-y: auto;
+  }
+}
+
+@keyframes heightOut {
+  0% {
+    max-height: 10em;
+    overflow-y: hidden;
+  }
+  99% {
+    max-height: 0;
+    overflow-y: hidden;
+  }
+  100% {
+    max-height: 0;
+    overflow-y: hidden;
+  }
+}
